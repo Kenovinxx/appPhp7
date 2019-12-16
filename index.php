@@ -22,45 +22,41 @@
     </header>
 <section id="contenedor">
 <section  class="problema">
-  <h2>Problema: Cálcular la densidad de la Tierra</h2>
+  <h2>Problema: Movimiento Circular</h2>
   <p>Descripción:</p>
-  <p>El radio de la Tierra es 6 378 km y su masa es 5.97E24 kg. <br>
-a) ¿Cuál es la densidad promedio de la Tierra?<br>
-b) Si el radio de la Tierra se redujera a una tercera parte y su masa no cambiará, cuál serı́a su densidad?<br>
-c) Si el radio de la Tierra y su masa se redujera a una
-tercera parte, ¿su densidad serı́a la misma? ¿por qué?</p>
+  <p>Determinar la magnitud de la velocidad angular de una llanta de automóvil a los 0.3 minutos, si tenía una velocidad angular inicial cuya magnitud es de 8 rad/s y sufre una aceleración angular cuya magnitud es de 4 rad/s² ?</p>
 </section>
 <section class="formulas">
 <h2>Fórmulas</h2>
-    Densidad = Masa/Volumen<br>
-    Volumen=(4/3)pi*r*r*r
+    W = Θ/t <br>
+    Wf = Wo + Θt
 </section>
 <section class="datos">
 <h2>Datos:</h2>
-   m= 5.97E24 Kg. <br>
-   r= 6378 Km.
+    Velocidad angular inicial = Wo = 8 rad/s<br>
+    Desplazamiento angular = Θ = 4 rad/s²<br>
+    Tiempo = t = 0.3 min = 18 s
 </section>
 <section class="calculos">
 <h2>Solución</h2>
-   <p>a)La densidad de la Tierra es:<br>
-    densidad = 5.97E24 Kg/volumen (m) <br>
-    volumen= (4/3)*pi*(6378000)*(6378000)*(6378000)</p>
+   <p>Se necesita convertir el tiempo en segundos:<br>
+    t = 0.3 min (60 s/ 1 min) = 18 s <br>
+    Wf = 8 rad/s + (4 rad/s²)(18 s) <br>
+    Wf = 8 rad/s + 72 rad/s</p>
 </section>
 <?php
-     function calcula_densidad(){
-        $PI=3.141592;
-        $masa= 5.97E24;
-        $radio= 6378e3;
-        $volumen= (4/3)*$PI*$radio*$radio*$radio;
-        $densidad= $masa/$volumen;
-        return $densidad;
+     function calcula(){
+        $W=8;
+        $O=72;
+        $res=$W+$O;
+        return $res;
      }
 ?>
 <section class="resultado">
 <h2>Resultado:</h2>
 <div id="resultadoA"></div>
 <?php
- print "<h1> resultado: densidad = ".calcula_densidad(). " kg/(metro cubico)</h1>";
+ print "<h1> Resultado = La magnitud de la velocidad angular de una llanta de automóvil es: ".calcula(). " rad/s</h1>";
 ?>
 </section>
 </section>
